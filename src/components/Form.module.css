@@ -2,11 +2,27 @@
   width: 60vw;
   border: 1px solid blue;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .formContainer {
   border: 1px solid red;
-
   padding: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.7rem;
 }

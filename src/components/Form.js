@@ -10,23 +10,59 @@ function Form() {
         <em>now</em> to get started
       </div>
       <form className={Styling.formContainer}>
-        <label>FIRST NAME</label>
-        <input type="text"></input>
+        <div className={Styling.inputRow}>
+          <div className={Styling.input}>
+            <label className={Styling.label} for="firstName">
+              FIRST NAME
+            </label>
+            <input
+              classname={Styling.label}
+              id="firstName"
+              name="firstName"
+              type="text"
+            ></input>
+          </div>
 
-        <label>LAST NAME</label>
-        <input type="text"></input>
+          <div className={Styling.input}>
+            <label className={Styling.label} for="lastName">
+              LAST NAME
+            </label>
+            <input id="lastName" name="lastName" type="text"></input>
+          </div>
+        </div>
+        <div className={Styling.inputRow}>
+          <div className={Styling.input}>
+            <label className={Styling.label} for="email">
+              EMAIL
+            </label>
+            <input id="email" name="email" type="email"></input>
+          </div>
 
-        <label>EMAIL</label>
-        <input type="email"></input>
-
-        <label>PHONE NUMBER</label>
-        <input type="tel"></input>
-
-        <label>PASSWORD</label>
-        <input type="password"></input>
-
-        <label>CONFIRM PASSWORD</label>
-        <input type="password"></input>
+          <div className={Styling.input}>
+            <label className={Styling.label} for="phoneNumber">
+              PHONE NUMBER
+            </label>
+            <input id="phoneNumber" name="phoneNumber" type="tel"></input>
+          </div>
+        </div>
+        <div className={Styling.inputRow}>
+          <div className={Styling.input}>
+            <label className={Styling.label} for="password">
+              PASSWORD
+            </label>
+            <input id="password" name="password" type="password"></input>
+          </div>
+          <div className={Styling.input}>
+            <label className={Styling.label} for="confirmPassword">
+              CONFIRM PASSWORD
+            </label>
+            <input
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+            ></input>
+          </div>
+        </div>
 
         <button>Create Account</button>
       </form>

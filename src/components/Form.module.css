@@ -1,0 +1,12 @@
+.mainContainer {
+  width: 60vw;
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: row;
+}
+
+.formContainer {
+  border: 1px solid red;
+
+  padding: 70px;
+}

@@ -1,70 +1,128 @@
 import React from "react";
 import Styling from "./Form.module.css";
 
-function Form() {
+function Form(props) {
   return (
     <div className={Styling.mainContainer}>
-      <div>
+      <div className={Styling.serviceMessage}>
         This is not a real online service! You know you need somethiung like
-        this in your life to help you realize your deepest dreams. Sign up{" "}
-        <em>now</em> to get started
+        this in your life to help you realize your deepest dreams.
+        <br /> Sign up <em>now</em> to get started
+        <br />
+        <br /> You <em>know</em> you want to!
       </div>
-      <form className={Styling.formContainer}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          props.checkPassword(e);
+        }}
+        className={Styling.formContainer}
+      >
+        <div className={Styling.letsDoThis}>LET'S DO THIS!</div>
         <div className={Styling.inputRow}>
-          <div className={Styling.input}>
-            <label className={Styling.label} for="firstName">
+          <div className={Styling.inputContainer}>
+            <label className={Styling.label} htmlFor="firstName">
               FIRST NAME
             </label>
             <input
-              classname={Styling.label}
+              placeholder="John"
+              required
+              className={Styling.input}
               id="firstName"
               name="firstName"
               type="text"
             ></input>
           </div>
 
-          <div className={Styling.input}>
-            <label className={Styling.label} for="lastName">
+          <div className={Styling.inputContainer}>
+            <label className={Styling.label} htmlFor="lastName">
               LAST NAME
             </label>
-            <input id="lastName" name="lastName" type="text"></input>
+            <input
+              placeholder="Doe"
+              required
+              className={Styling.input}
+              id="lastName"
+              name="lastName"
+              type="text"
+            ></input>
           </div>
         </div>
         <div className={Styling.inputRow}>
-          <div className={Styling.input}>
-            <label className={Styling.label} for="email">
+          <div className={Styling.inputContainer}>
+            <label className={Styling.label} htmlFor="email">
               EMAIL
             </label>
-            <input id="email" name="email" type="email"></input>
+            <input
+              placeholder="realEmail@gmail.com"
+              required
+              className={Styling.input}
+              id="email"
+              name="email"
+              type="email"
+            ></input>
           </div>
 
-          <div className={Styling.input}>
-            <label className={Styling.label} for="phoneNumber">
+          <div className={Styling.inputContainer}>
+            <label className={Styling.label} htmlFor="phoneNumber">
               PHONE NUMBER
             </label>
-            <input id="phoneNumber" name="phoneNumber" type="tel"></input>
+            <input
+              placeholder="123-123-1234"
+              required
+              className={Styling.input}
+              id="phoneNumber"
+              name="phoneNumber"
+              type="tel"
+            ></input>
           </div>
         </div>
         <div className={Styling.inputRow}>
-          <div className={Styling.input}>
-            <label className={Styling.label} for="password">
+          <div className={Styling.inputContainer}>
+            <label className={Styling.label} htmlFor="password">
               PASSWORD
             </label>
-            <input id="password" name="password" type="password"></input>
+            <input
+              onChange={(e) => props.handleChange(e)}
+              maxLength="12"
+              required
+              className={Styling.input}
+              id="password"
+              name="password"
+              type="password"
+            ></input>
+            <div className={Styling.passwordMessage} id="passwordMessage"></div>
+            <div className={Styling.passwordMark} id="passwordMark"></div>
           </div>
-          <div className={Styling.input}>
-            <label className={Styling.label} for="confirmPassword">
+          <div className={Styling.inputContainer}>
+            <label className={Styling.label} htmlFor="confirmPassword">
               CONFIRM PASSWORD
             </label>
             <input
+              onChange={(e) => props.handleChange(e)}
+              maxLength="12"
+              required
+              className={Styling.input}
               id="confirmPassword"
               name="confirmPassword"
               type="password"
             ></input>
+            <div
+              className={Styling.passwordMessage}
+              id="confirmPasswordMessage"
+            ></div>
+            <div
+              className={Styling.passwordMark}
+              id="confirmPasswordMark"
+            ></div>
           </div>
         </div>
-
-        <button>Create Account</button>
+        <div className={Styling.bottomContainer}>
+          <button className={Styling.createAccountBtn}>Create Account</button>
+          <div className={Styling.haveAnAccount}>
+            ALREADY HAVE AN ACCOUNT? <a href="#">LOG IN</a>
+          </div>
+        </div>
       </form>
     </div>
   );

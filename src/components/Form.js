@@ -5,8 +5,8 @@ function Form(props) {
   return (
     <div className={Styling.mainContainer}>
       <div className={Styling.serviceMessage}>
-        This is not a real online service! You know you need somethiung like
-        this in your life to help you realize your deepest dreams.
+        This is not a real online service! You know you need something like this
+        in your life to help you realize your deepest dreams.
         <br /> Sign up <em>now</em> to get started
         <br />
         <br /> You <em>know</em> you want to!
@@ -120,7 +120,7 @@ function Form(props) {
         <div className={Styling.bottomContainer}>
           <button className={Styling.createAccountBtn}>Create Account</button>
           <div className={Styling.haveAnAccount}>
-            ALREADY HAVE AN ACCOUNT? <a href="#">LOG IN</a>
+            Already have an account? <a href="#">Log in</a>
           </div>
         </div>
       </form>

@@ -101,6 +101,15 @@
 }
 
 .haveAnAccount {
-  margin-top: 20px;
+  letter-spacing: 1.1px;
+  font-size: 1.3rem;
+  margin-top: 40px;
   padding-left: 70px;
+}
+
+.haveAnAccount a {
+  letter-spacing: 1.1px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: rgb(127, 127, 230);
 }

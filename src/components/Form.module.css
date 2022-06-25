@@ -34,6 +34,7 @@
   flex-direction: column;
   margin-right: 100px;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .passwordMark {
@@ -73,7 +74,7 @@
   border: 2px solid rgb(187, 187, 187);
   border-radius: 5px;
   height: 30px;
-  width: 280px;
+  
 }
 
 .input:focus {
@@ -112,4 +113,71 @@
   font-size: 1.3rem;
   text-decoration: none;
   color: rgb(127, 127, 230);
+}
+
+
+@media  screen and (max-width: 1314px) {
+  .inputRow {
+    background-color: white;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+  }
+  .input {
+    border: 2px solid rgb(187, 187, 187);
+    border-radius: 5px;
+    height: 30px;
+    width: 46vw;
+  }
+}
+
+
+
+@media screen and (max-width: 860px) {
+  .mainContainer {
+    min-height: 700px;
+    min-width: 350px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .serviceMessage {
+    height: 12vh;
+    padding: 90px 70px 0 70px;
+    font-size: 1.5rem;
+  }
+
+  .inputContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 30px;
+    width: 40%;
+  }
+  .inputRow {
+    padding-left: auto;
+    padding-right: auto;
+    background-color: rgb(84, 35, 35);
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-items: stretch;
+  }
+  .input {
+    border: 2px solid rgb(187, 187, 187);
+    border-radius: 5px;
+    height: 30px;
+    width: 80vw;
+    flex: 2;
+    
+  }
+
+  
+
+  
 }

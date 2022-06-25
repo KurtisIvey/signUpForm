@@ -42,3 +42,10 @@
 .creditLink {
   color: rgba(255, 255, 255, 0.849);
 }
+
+
+@media screen and (max-width: 860px) {
+  .backgroundImage {
+    display: none;
+  }
+}
